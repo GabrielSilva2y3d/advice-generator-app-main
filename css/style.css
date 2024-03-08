@@ -1,6 +1,4 @@
 body {
-    background-image: url(../images/Dodgeball.png);
-    background-size: cover;
     background-color: hsl(218, 23%, 16%);
 }
 
@@ -15,11 +13,9 @@ body {
     position: absolute;
     bottom: 40%;
     border-radius: 15px;
-    min-height: 40%;
-    min-width: 30%;
-    max-width: 50%;
+    width: 35%;
+    height: 40%;
     background-color: hsl(217, 19%, 24%);
-    opacity: 0.8;
     color: #fff;
     padding: 0 0.6em;
     text-align: center;
@@ -27,28 +23,41 @@ body {
 
 .advice-id {
     position: absolute;
-    top: 0;
-    margin-top: -5px;
+    top: 15%;
+    display: flex;
     color: hsl(150, 100%, 66%);
     font-family: 'Manrope', sans-serif;
-    font-size: 0.8em;
+    font-size: 0.7em;
     letter-spacing: 0.5cap;
 }
 
-.advice-text {
+#advice-text {
     display: flex;
     color: hsl(193, 38%, 86%);
     font-family: 'Manrope', sans-serif;
     font-weight: 550; 
     font-size: 1.4em;
     margin: 0.6em;
-    padding: 1.2em;
+    padding: 1em;
+}
+
+.divider {
+    position: absolute;
+    bottom: 15%;
+    width: 80%;
+    padding: 0.5em;
+}
+
+.divider img {
+    width: 100%;
+    height: 100%;
 }
 
 .advice-button {
     position: absolute;
     bottom: 0;
-    margin-bottom: -25px;
+    margin-top: 1.5em;
+    margin-bottom: -2.5em;
     border-radius: 50%;
     border: none;
     background-color: hsl(150, 100%, 66%);
@@ -80,4 +89,45 @@ footer {
     padding: 0.5em;
     background: hsl(218, 23%, 16%);
     color: white;
+}
+
+
+@media (max-width: 1024px) {
+  .advice-content {
+    position: absolute;
+    top: 20%;  
+    bottom: unset;      
+    border-radius: 15px;
+    width: 70%;    
+    height: 15em;    
+    background-color: hsl(217, 19%, 24%);
+    color: #fff;
+    padding: 0.6em;
+    text-align: center;
+  }
+
+  .advice-id {
+    margin: 0;
+    font-size: 0.5em;
+  }
+
+  #advice-text {
+    margin: 0.5em;       
+    padding: 1em;    
+    font-size: 1.2em;
+  }
+
+  .divider {
+    bottom: 10%;
+    width: 80%;       
+    margin-bottom: 0.5em; 
+  }
+
+  .divider img {
+    src: url(../images/pattern-divider-mobile.svg);
+  }
+
+  .attribution {
+    margin-top: 0.5em;  
+  }
 }

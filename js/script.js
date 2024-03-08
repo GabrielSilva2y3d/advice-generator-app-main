@@ -1,7 +1,15 @@
-function loadJoke() {
-    const jsonJoke = document.getElementById("jsonJoke");
-    const joke = document.getElementById("joke");
+const adviceId = document.getElementById('id');
+const adviceText = document.getElementById('advice-text');
 
-    const jokeValue = JSON.parse(jsonJoke.textContent).value;
-    joke.textContent  = jokeValue ? jokeValue : "";
+function getAdvice() {
+    fetch('https://api.adviceslip.com/advice')
+        .then(response => response.json())
+        .then(data => {
+            adviceId.innerHTML = data.slip.id;  
+            adviceText.innerHTML = data.slip.advice;
+        }).catch(error => {
+            console.error('Error:', error)
+        });
 }
+
+getAdvice()

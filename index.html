@@ -10,18 +10,20 @@
 <body>
   <div class="centered advice-container">
     <div class="centered advice-content">
-      <div class="advice-id"><span> CHUCK NORRIS JOKES </span></div>
-      <div class="advice-text">
-        <p id="jsonJoke" hx-get="https://api.chucknorris.io/jokes/random" hx-trigger="load" hidden></p>
-        <p id="joke">SMASH THE BUTTON BELLOW</p>
+      <div class="advice-id">
+        <p>ADVICE #</p>
+        <p id="id">107</p>
       </div>
-      <button class="advice-button" hx-get="https://api.chucknorris.io/jokes/random" hx-target="#jsonJoke" hx-swap="innerHtml" onclick="loadJoke()">
+      <div id="advice-text"></div>
+      <div class="divider">
+        <img src="images/pattern-divider-desktop.svg" alt="divider">
+      </div>
+      <button class="advice-button" onclick="getAdvice()">
         <img src="images/icon-dice.svg" alt="dice-icon">
       </button>
     </div>
   </div>
 
-<script src="node_modules/htmx.org/dist/htmx.js"></script>
 <script src="js/script.js"></script>
 </body>
 <footer>
